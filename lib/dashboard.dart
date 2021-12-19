@@ -141,7 +141,12 @@ class _DashBoardState extends State<DashBoard> {
             ),
             Column(
               children: [
-                Text("${a.name}"),
+                Container(
+                    width: MediaQuery.of(context).size.width / 2.5,
+                    child: Text(
+                      "${a.name}",
+                      overflow: TextOverflow.ellipsis,
+                    )),
                 Text("${a.price}"),
                 Row(
                   children: [
